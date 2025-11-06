@@ -14,7 +14,7 @@
        <!--  update properties with sonar organization-->
      <sonar.organization>noufbinhassan</sonar.organization>
      <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-</properties>
+
   </properties>
 
 
