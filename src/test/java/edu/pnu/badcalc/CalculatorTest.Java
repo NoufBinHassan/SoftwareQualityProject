@@ -48,4 +48,39 @@ class CalculatorTest {
         assertThrows(IllegalArgumentException.class,
                 () -> c.factorial(-1));
     }
+    @Test
+void add_shouldHandleNegativeNumbers() {
+    Calculator c = new Calculator();
+    assertEquals(-1.0, c.add(2.0, -3.0));
 }
+
+@Test
+void subtract_shouldHandleNegativeResult() {
+    Calculator c = new Calculator();
+    assertEquals(-7.0, c.subtract(-4.0, 3.0));
+}
+
+@Test
+void multiply_shouldHandleZero() {
+    Calculator c = new Calculator();
+    assertEquals(0.0, c.multiply(5.0, 0.0));
+}
+
+@Test
+void divide_shouldHandleFractions() {
+    Calculator c = new Calculator();
+    assertEquals(0.5, c.divide(1.0, 2.0));
+}
+
+@Test
+void factorial_shouldReturnOneForZero() {
+    Calculator c = new Calculator();
+    assertEquals(1, c.factorial(0));
+}
+
+@Test
+void main_shouldRunWithoutErrors() {
+    App.main(new String[]{});
+}
+}
+
